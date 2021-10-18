@@ -118,8 +118,10 @@ class ImageUtils {
 
                     return $guzzle->sendAsync(new Request('GET', $url), $options);
                 };
-                
-                unlink($file);
+
+                if(is_file($file)){
+                    unlink($file);
+                }
             }
         };
 
