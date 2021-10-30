@@ -120,7 +120,7 @@ class ImageUtils {
                 };
 
                 if(is_file($file)){
-                    unlink($file);
+                    @unlink($file);
                 }
             }
         };
